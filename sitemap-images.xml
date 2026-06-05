@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+<url>
+<loc>https://inktenebris.github.io/</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art3.jpg</image:loc>
+<image:title>INKTENEBRIS</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/the-hollow-one.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art1.jpg</image:loc>
+<image:title>THE HOLLOW ONE</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/metamorphosis.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art2.jpg</image:loc>
+<image:title>METAMORPHOSIS</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/the-observer.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art3.jpg</image:loc>
+<image:title>THE OBSERVER</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/smile-without-eyes.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art4.jpg</image:loc>
+<image:title>SMILE WITHOUT EYES</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/unhinged.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art5.jpg</image:loc>
+<image:title>UNHINGED</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/the-hand-that-sees.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art6.jpg</image:loc>
+<image:title>THE HAND THAT SEES</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/the-clown-below.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art7.jpg</image:loc>
+<image:title>THE CLOWN BELOW</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/sewn-flesh.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art8.jpg</image:loc>
+<image:title>SEWN FLESH</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+<url>
+<loc>https://inktenebris.github.io/artworks/watcher.html</loc>
+<image:image>
+<image:loc>https://inktenebris.github.io/images/art9.jpg</image:loc>
+<image:title>WATCHER</image:title>
+<image:caption>Dark surreal ballpoint pen artwork by Soumalya Sarkar</image:caption>
+</image:image>
+</url>
+
+</urlset>

@@ -1,0 +1,8 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://inktenebris.github.io/sitemap.xml
+Sitemap: https://inktenebris.github.io/sitemap-images.xml
+
+Host: https://inktenebris.github.io

@@ -1,0 +1,18 @@
+{
+"real-name":"SOUMALYA SARKAR",
+"name":"INKTENEBRIS",
+"short_name":"INKTENEBRIS",
+"description":"Dark Ballpoint Art",
+"genre":"Dark Surrealism",
+"theme_color":"#000000",
+"background_color":"#000000",
+"display":"standalone",
+"start_url":"/",
+"icons":[
+{
+"src":"images/favicon.png",
+"sizes":"512x512",
+"type":"image/png"
+}
+]
+}
