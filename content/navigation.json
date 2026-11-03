@@ -1,0 +1,56 @@
+{
+  "primary": [
+    {
+      "label": "ART",
+      "url": "#art"
+    },
+    {
+      "label": "ABOUT",
+      "url": "#about"
+    },
+    {
+      "label": "SOCIAL",
+      "url": "#instagram"
+    },
+    {
+      "label": "CONTACT",
+      "url": "#contact"
+    },
+    {
+      "label": "UPDATES",
+      "url": "#updates"
+    }
+  ],
+  "info": [
+    {
+      "label": "Artist Statement",
+      "url": "pages/artist-statement.html"
+    },
+    {
+      "label": "Curriculum Vitae",
+      "url": "pages/cv.html"
+    },
+    {
+      "label": "Exhibitions",
+      "url": "pages/exhibitions.html"
+    },
+    {
+      "label": "Press",
+      "url": "pages/press.html"
+    },
+    {
+      "label": "Press Kit",
+      "url": "pages/press-kit.html"
+    }
+  ],
+  "footer": [
+    {
+      "label": "Terms of Use",
+      "url": "legal/terms.html"
+    },
+    {
+      "label": "Privacy Policy",
+      "url": "legal/privacy.html"
+    }
+  ]
+}

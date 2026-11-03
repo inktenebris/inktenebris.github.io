@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; object-src 'none'; base-uri 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; form-action 'self' https://buttondown.com;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="{{ description }}" />
+  <meta name="author" content="{{ artist.name }}" />
+  <meta name="theme-color" content="{{ site.theme_color }}" />
+  <link rel="canonical" href="{{ canonical }}" />
+  <title>{{ title }} | {{ site.site_name }}</title>
+  <meta property="og:title" content="{{ title }} | {{ site.site_name }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:image" content="{{ site.url }}/{{ social_image }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.site_name }}" />
+  <meta property="og:url" content="{{ canonical }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title }} | {{ site.site_name }}" />
+  <meta name="twitter:description" content="{{ description }}" />
+  <meta name="twitter:image" content="{{ site.url }}/{{ social_image }}" />
+  {% if preload_image %}
+  <link rel="preload" as="image" href="{{ base }}{{ preload_image }}" />{% endif %}
+  <link rel="icon" href="{{ base }}images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="{{ base }}images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ base }}images/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ base }}images/apple-touch-icon.png" />
+  <link rel="manifest" href="{{ base }}site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="{{ base }}assets/style.css" />
+  <script type="application/ld+json">{{ schema | tojson }}</script>
+</head>
+
+<body>
+  <div class="scroll-progress"></div>
+  <div id="page-transition"></div>
+  <div class="noise"></div>
+  {% if is_home %}<div id="loader">
+    <div class="loader-text"><span>{{ site.site_name }}</span>
+      <div class="loader-line"></div>
+    </div>
+  </div>{% endif %}
+  <nav class="side-nav">
+    <a href="{{ base }}index.html" class="side-logo"><img src="{{ base }}{{ site.assets.logo }}" width="1000"
+        height="1000" alt="{{ site.site_name }} Logo" /></a>
+    <div class="side-links">{% for item in navigation.primary %}<a
+        href="{% if is_home and item.url.startswith('#') %}{{ item.url }}{% else %}{{ base }}{% if item.url.startswith('#') %}index.html{{ item.url }}{% else %}{{ item.url }}{% endif %}{% endif %}">{{
+        item.label }}</a>{% endfor %}</div>
+    <div class="info-menu"><button class="info-toggle" type="button" aria-expanded="false"
+        aria-controls="site-info-menu">{{ site.ui.info_label }}</button>
+      <div class="info-panel" id="site-info-menu" hidden>{% for item in navigation.info %}<a
+          href="{% if is_home and item.url.startswith('#') %}{{ item.url }}{% else %}{{ base }}{% if item.url.startswith('#') %}index.html{{ item.url }}{% else %}{{ item.url }}{% endif %}{% endif %}">{{
+          item.label }}</a>{% endfor %}</div>
+    </div>
+  </nav>
+  {{ body | safe }}
+  <footer>
+    <div class="footer-links"><span>© {{ year }} {{ artist.name }} ({{ site.site_name }}). {{ site.ui.copyright_suffix
+        }}</span>{% for item in navigation.footer %}<a
+        href="{% if is_home and item.url.startswith('#') %}{{ item.url }}{% else %}{{ base }}{% if item.url.startswith('#') %}index.html{{ item.url }}{% else %}{{ item.url }}{% endif %}{% endif %}">{{
+        item.label }}</a>{% endfor %}</div>
+  </footer>
+  <script defer src="{{ base }}assets/vendor/gsap.min.js"></script>
+  <script defer src="{{ base }}assets/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="{{ base }}assets/script.js"></script>
+</body>
+
+</html>

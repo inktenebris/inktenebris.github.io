@@ -1,0 +1,80 @@
+<main>
+  <section class="hero">
+    <img src="{{ home.hero.image }}" width="{{ hero_size[0] }}" height="{{ hero_size[1] }}" class="hero-image"
+      alt="{{ home.hero.image_alt }}" />
+    <div class="hero-overlay">
+      <h1 class="hero-title">{{ home.hero.title }}</h1>
+      <p>{{ home.hero.subtitle }}</p>
+      <div class="scroll-down">{{ site.ui.view_work }}</div>
+    </div>
+  </section>
+  <section class="intro">
+    <div class="intro-content">
+      <h2>{{ home.intro.title }}</h2>{% for paragraph in home.intro.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+    </div>
+  </section>
+  {% for item in showcases %}<section class="split-showcase{% if loop.index is even %} reverse{% endif %}">
+    <div class="split-image"><img src="images/{{ item.image }}" width="{{ item.width }}" height="{{ item.height }}"
+        alt="{{ item.title }} Artwork" loading="lazy" /></div>
+    <div class="split-content">
+      <h2>{{ item.title | upper }}</h2>
+      <p>{{ item.showcase_description }}</p>
+    </div>
+  </section>{% endfor %}
+  <section class="exhibition-intro">
+    <div class="exhibition-number">{{ '%02d'|format(home.selected.artworks|length) }}</div>
+    <h2>{{ home.selected.title }}</h2>
+    <p>{{ home.selected.description }}</p>
+  </section>
+  <section class="gallery" id="art">{% for work in selected_works %}<a href="artworks/{{ work.slug }}.html"
+      class="artwork"><img src="images/{{ work.image }}" width="{{ work.width }}" height="{{ work.height }}"
+        alt="{{ work.title }} dark surreal ballpoint pen artwork by {{ artist.name }}" loading="lazy" />
+      <div class="artwork-overlay">
+        <div class="art-number">{{ '%02d'|format(loop.index) }}</div>
+        <h3>{{ work.title|upper }}</h3><span>{{ site.ui.view_work_arrow }}</span>
+      </div>
+    </a>{% endfor %}</section>
+  <section class="manifesto">
+    <h2>{{ home.manifesto.title }}</h2>
+    <p>{{ home.manifesto.text }}</p>
+  </section>
+  <section id="about">
+    <div class="about-left">
+      <h2>{{ home.about.title|linebreaks }}</h2>
+      <div class="artist-image"><img src="{{ site.assets.artist_image }}" width="{{ artist_size[0] }}" height="{{ artist_size[1] }}"
+          alt="{{ artist.name }}" loading="lazy" /></div>
+    </div>
+    <div class="about-right">{% for paragraph in artist.biography %}<p>{{ paragraph }}</p>{% endfor %}</div>
+    <div class="artist-meta">
+      <p>{{ site.ui.profile_labels.location }}: {{ artist.location }}</p>
+      <p>{{ site.ui.profile_labels.medium }}: {{ artist.medium }}</p>
+      <p>{{ site.ui.profile_labels.style }}: {{ artist.style }}</p>
+    </div>
+  </section>
+  <section id="instagram">
+    <div class="social-links">{% for social in site.socials %}<a href="{{ social.url }}"
+        aria-label="Visit {{ site.site_name }} on {{ social.label }}" target="_blank" rel="noopener noreferrer"
+        class="social-link"><span class="social-icon" aria-hidden="true">{% if social.label == 'Instagram' %}<svg
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>{% else %}{{ social.label[0] }}{% endif %}</span><span>{{ social.label }}</span></a>{% endfor %}</div>
+  </section>
+  <section id="contact">
+    <h2>{{ home.contact.title }}</h2>
+    <p>{{ home.contact.description }}</p>
+    <p class="contact-location">{{ home.contact.location }}</p><a href="mailto:{{ site.email }}"
+      aria-label="{{ site.ui.contact_aria_label }}" class="contact-btn">{{ home.contact.button }}</a>
+  </section>
+  {% if site.newsletter_enabled %}<section id="updates">
+    <div class="updates-container">
+      <h2>{{ home.newsletter.title }}</h2>
+      <p>{{ home.newsletter.description }}</p>
+      <form action="{{ site.newsletter_action }}" method="post" target="_blank" class="updates-form"><label
+          class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email"
+          name="email" placeholder="Your Email Address" autocomplete="email" required /><button type="submit">{{
+          home.newsletter.button }}</button></form>
+    </div>
+  </section>{% endif %}
+</main>

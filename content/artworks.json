@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "the-hollow-one",
+    "title": "The Hollow One",
+    "image": "artworks/art1.jpg",
+    "date": "2026-04-15",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A surreal ballpoint pen illustration exploring curiosity, transformation and the unknown. The butterfly becomes a fragile contrast against a figure emerging from darkness, suggesting both decay and rebirth.",
+    "quote": "Fear rarely arrives screaming. It grows quietly in the dark."
+  },
+  {
+    "slug": "metamorphosis",
+    "title": "Metamorphosis",
+    "image": "artworks/art2.jpg",
+    "date": "2024-05-10",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A psychological portrait depicting inner conflict, transformation and emotional decay. The distorted anatomy represents the struggle between identity and self perception.",
+    "quote": "We become strangers long before we change."
+  },
+  {
+    "slug": "the-observer",
+    "title": "The Observer",
+    "image": "artworks/art3.jpg",
+    "date": "2025-10-15",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "An unsettling study of perception and silent presence. The single eye exists between darkness and awareness, suggesting a watcher hidden beyond ordinary sight.",
+    "quote": "Some things never blink."
+  },
+  {
+    "slug": "smile-without-eyes",
+    "title": "Smile Without Eyes",
+    "image": "artworks/art4.jpg",
+    "date": "2024-04-05",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A portrait suspended between familiarity and dread. The expression remains frozen in an impossible smile, while the absence of eyes removes every trace of human comfort and emotion.",
+    "quote": "A smile can hide anything."
+  },
+  {
+    "slug": "unhinged",
+    "title": "Unhinged",
+    "image": "artworks/art5.jpg",
+    "date": "2025-10-18",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A study of emotional collapse and distorted anatomy. The figure appears trapped between transformation and destruction, creating tension through impossible forms and exaggerated expression.",
+    "quote": "The fracture began long before it was visible."
+  },
+  {
+    "slug": "the-hand-that-sees",
+    "title": "The Hand That Sees",
+    "image": "artworks/art6.jpg",
+    "date": "2024-04-08",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A surreal fusion of touch and perception. The eye emerges from the hand as a symbol of awareness, suggesting that understanding can come through instinct, memory and sensation rather than sight alone.",
+    "quote": "Some truths are felt before they are seen."
+  },
+  {
+    "slug": "the-clown-below",
+    "title": "The Clown Below",
+    "image": "artworks/art7.jpg",
+    "date": "2025-04-14",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A distorted clown figure emerging from darkness, balancing absurdity and dread. The exaggerated features transform a familiar symbol of entertainment into something unsettling and psychologically ambiguous.",
+    "quote": "The mask smiles long after the laughter ends."
+  },
+  {
+    "slug": "sewn-flesh",
+    "title": "Sewn Flesh",
+    "image": "artworks/art8.jpg",
+    "date": "2026-01-05",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "Fragments stitched together in an attempt to become whole. The piece explores trauma, repair and identity, where every scar becomes evidence of survival rather than a mark of weakness.",
+    "quote": "What was broken never truly disappeared."
+  },
+  {
+    "slug": "watcher",
+    "title": "Watcher",
+    "image": "artworks/art9.jpg",
+    "date": "2024-04-03",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A silent presence emerging from darkness. The elongated form and hollow gaze create a feeling of being observed from somewhere beyond the visible world.",
+    "quote": "When nobody is watching, something always is."
+  },
+  {
+    "slug": "without-eyes",
+    "title": "Without Eyes",
+    "image": "artworks/art10.jpg",
+    "date": "2026-04-03",
+    "dimensions": "210 × 297 mm (A4)",
+    "description": "A faceless figure emerging from absolute darkness. The absence of eyes removes every anchor of human connection, leaving only an oppressive sense of being watched by something that sees without being seen.",
+    "quote": "When nobody is watching, something always is."
+  }
+]

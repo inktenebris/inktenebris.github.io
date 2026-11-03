@@ -1,0 +1,5 @@
+Contact: mailto:soumalyasarkar61@gmail.com
+Expires: 2027-10-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://inktenebris.github.io/.well-known/security.txt
+Policy: https://inktenebris.github.io/legal/terms.html

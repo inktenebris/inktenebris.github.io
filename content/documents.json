@@ -1,0 +1,24 @@
+{
+  "cv": {
+    "title": "Curriculum Vitae"
+  },
+  "statement": {
+    "title": "Artist Statement"
+  },
+  "press_kit": {
+    "title": "Press Kit",
+    "facts_labels": {
+      "artist": "Artist",
+      "artist_name": "Artist Name",
+      "location": "Location",
+      "medium": "Medium",
+      "style": "Style",
+      "practice": "Practice"
+    }
+  },
+  "downloads": {
+    "cv": "Download CV (PDF)",
+    "statement": "Download Artist Statement (PDF)",
+    "press_kit": "Download Press Kit (PDF)"
+  }
+}

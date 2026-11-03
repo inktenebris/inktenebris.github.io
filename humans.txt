@@ -1,0 +1,27 @@
+/* TEAM */
+
+Artist:
+Soumalya Sarkar
+
+Project:
+INKTENEBRIS
+
+Location:
+India
+
+Email:
+soumalyasarkar61@gmail.com
+
+/* SITE */
+
+Dark Surreal Ballpoint Art
+
+Hand-coded Portfolio
+
+Built with:
+HTML
+CSS
+JavaScript
+
+Launch:
+2026

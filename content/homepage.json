@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "INKTENEBRIS",
+    "subtitle": "Dark Surreal Ballpoint Drawings By Soumalya Sarkar",
+    "image": "images/artworks/art3.jpg",
+    "image_alt": "Featured dark artwork by Soumalya Sarkar",
+    "preload": "images/artworks/art3.jpg"
+  },
+  "intro": {
+    "title": "DRAWN FROM THE DARK",
+    "paragraphs": [
+      "INKTENEBRIS is a collection of surreal ballpoint pen illustrations exploring psychological horror, distorted identity, dream imagery and isolation.",
+      "Every artwork is created entirely by hand through dense layers of ink and obsessive mark-making."
+    ]
+  },
+  "showcases": [
+    {
+      "artwork": "unhinged",
+      "description": "Psychological ballpoint illustration exploring observation, isolation and distorted identity."
+    },
+    {
+      "artwork": "the-hollow-one",
+      "description": "A study of emptiness and perception rendered entirely with ballpoint pen."
+    }
+  ],
+  "selected": {
+    "title": "SELECTED WORKS",
+    "description": "A collection of surreal ballpoint pen drawings exploring identity, fear, isolation and transformation.",
+    "artworks": [
+      "the-hollow-one",
+      "metamorphosis",
+      "the-observer",
+      "smile-without-eyes",
+      "unhinged",
+      "the-hand-that-sees",
+      "the-clown-below",
+      "sewn-flesh",
+      "watcher",
+      "without-eyes"
+    ]
+  },
+  "manifesto": {
+    "title": "ART IS NOT MEANT TO COMFORT.",
+    "text": "It is meant to disturb, question and linger. Every drawing is an attempt to visualize thoughts that usually remain hidden."
+  },
+  "about": {
+    "title": "SOUMALYA<br />SARKAR"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Available for commissions, exhibitions, gallery opportunities, publications, interviews, collaborations and licensing.",
+    "location": "Based in India · Working worldwide",
+    "button": "EMAIL"
+  },
+  "newsletter": {
+    "title": "JOIN THE DARKNESS",
+    "description": "Receive new artworks, behind-the-scenes sketches, and exclusive updates from INKTENEBRIS.",
+    "button": "SUBSCRIBE"
+  }
+}

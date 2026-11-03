@@ -1,0 +1,69 @@
+{
+  "site_name": "INKTENEBRIS",
+  "tagline": "Dark Surreal Ballpoint Art by Soumalya Sarkar",
+  "url": "https://inktenebris.github.io",
+  "language": "en",
+  "theme_color": "#000000",
+  "copyright_year": "auto",
+  "email": "soumalyasarkar61@gmail.com",
+  "newsletter_action": "https://buttondown.com/api/emails/embed-subscribe/soumalya",
+  "newsletter_enabled": true,
+  "socials": [
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/inktenebris_art",
+      "handle": "@inktenebris_art"
+    },
+    {
+      "label": "Pinterest",
+      "url": "https://pin.it/1DlmSJZFg",
+      "handle": "Pinterest"
+    }
+  ],
+  "assets": {
+    "logo": "images/logo.png",
+    "favicon": "images/favicon.ico",
+    "social_image": "images/artworks/art1.jpg",
+    "hero_image": "images/artworks/art3.jpg",
+    "artist_image": "images/artist.jpg"
+  },
+  "seo": {
+    "description": "Dark surreal ballpoint pen artwork by Soumalya Sarkar. Intricate monochromatic drawings exploring psychological horror, identity, transformation and the subconscious.",
+    "keywords": [
+      "INKTENEBRIS",
+      "Soumalya Sarkar",
+      "dark surrealism",
+      "ballpoint pen art"
+    ]
+  },
+  "policy_updated": "June 2026",
+  "ui": {
+    "info_label": "INFO",
+    "view_work": "VIEW WORK",
+    "view_work_arrow": "VIEW WORK →",
+    "back_label": "BACK",
+    "previous_label": "← PREVIOUS",
+    "next_label": "NEXT WORK →",
+    "back_to_gallery_label": "BACK TO GALLERY →",
+    "gallery_label": "Gallery",
+    "copyright_suffix": "All Rights Reserved.",
+    "profile_labels": {
+      "location": "Location",
+      "medium": "Medium",
+      "style": "Style"
+    },
+    "artwork_labels": {
+      "medium": "MEDIUM",
+      "category": "CATEGORY",
+      "status": "STATUS",
+      "dimension": "DIMENSION",
+      "date": "DATE"
+    },
+    "contact_aria_label": "Mail INKTENEBRIS"
+  },
+  "artwork_defaults": {
+    "medium": "Ballpoint Pen on Paper",
+    "category": "Dark Surrealism",
+    "status": "Artist Collection (Not For Sale)"
+  }
+}

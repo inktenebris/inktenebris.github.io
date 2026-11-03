@@ -1,0 +1,248 @@
+{
+  "artist-statement": {
+    "title": "Artist Statement",
+    "subtitle": "INKTENEBRIS",
+    "download": {
+      "label": "DOWNLOAD ARTIST STATEMENT",
+      "file": "files/statement.pdf"
+    },
+    "sections": [
+      {
+        "heading": "",
+        "paragraphs": [
+          "INKTENEBRIS is an ongoing exploration of darkness, identity, memory and transformation. Working exclusively with ballpoint pen, I create surreal monochromatic drawings that emerge through thousands of deliberate marks and layers of ink. My work is influenced by psychological horror, dream imagery, isolation and the hidden structures of the subconscious. Human forms dissolve, familiar objects become unsettling, and fragments of memory are reconstructed into visual narratives. Rather than presenting direct answers, these drawings invite interpretation. They exist in the space between beauty and discomfort, familiarity and distortion, reality and imagination. The slow and demanding nature of ballpoint pen drawing is central to the process. Every mark is permanent. Every layer contributes to an image that gradually emerges from darkness. Through INKTENEBRIS, I seek to create artwork that lingers beyond the moment it is seen—images that provoke curiosity, unease and reflection while remaining open to personal meaning."
+        ]
+      }
+    ]
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "subtitle": "Artist Profile",
+    "download": {
+      "label": "DOWNLOAD CV",
+      "file": "files/cv.pdf"
+    },
+    "sections": [
+      {
+        "heading": "Artist",
+        "paragraphs": ["{{ artist.name }}"]
+      },
+      {
+        "heading": "Professional Name",
+        "paragraphs": ["{{ artist.professional_name }}"]
+      },
+      {
+        "heading": "Location",
+        "paragraphs": ["{{ artist.location }}"]
+      },
+      {
+        "heading": "Practice",
+        "paragraphs": ["{{ artist.practice }}"]
+      },
+      {
+        "heading": "Medium",
+        "paragraphs": ["{{ artist.medium }}"]
+      },
+      {
+        "heading": "Artist Profile",
+        "paragraphs": ["{{ artist.profile }}"]
+      },
+      {
+        "heading": "Education",
+        "paragraphs": ["{{ artist.education }}"]
+      },
+      {
+        "heading": "Selected Works",
+        "type": "artwork_list"
+      },
+      {
+        "heading": "Professional Practice",
+        "paragraphs": [
+          "{{ artist.professional_practice }}\n{{ artist.practice_period }}"
+        ]
+      },
+      {
+        "heading": "Skills",
+        "type": "artist_list",
+        "field": "skills"
+      },
+      {
+        "heading": "Software",
+        "type": "artist_list",
+        "field": "software"
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": ["{{ site.email }}"]
+      }
+    ]
+  },
+  "exhibitions": {
+    "title": "Exhibitions",
+    "subtitle": "Exhibition History",
+    "sections": [
+      {
+        "heading": "Current Status",
+        "paragraphs": [
+          "INKTENEBRIS is currently developing an expanding body of original dark surreal ballpoint artworks for future exhibitions, publications and gallery opportunities."
+        ]
+      },
+      {
+        "heading": "Selected Works",
+        "type": "artwork_list"
+      },
+      {
+        "heading": "Upcoming Exhibitions",
+        "paragraphs": [
+          "Current exhibition opportunities are under development. Future exhibitions and public presentations will be announced here."
+        ]
+      },
+      {
+        "heading": "Future Projects",
+        "paragraphs": [
+          "Current work focuses on expanding the INKTENEBRIS collection through new large-scale ballpoint drawings exploring identity, transformation and psychological horror."
+        ]
+      },
+      {
+        "heading": "Exhibition Inquiries",
+        "paragraphs": [
+          "For exhibition opportunities, curatorial projects or gallery collaborations: {{ site.email }}"
+        ]
+      }
+    ]
+  },
+  "press-kit": {
+    "title": "PRESS KIT",
+    "subtitle": "Media Resources & Artist Information",
+    "sections": [
+      {
+        "heading": "Artist Overview",
+        "paragraphs": ["{{ artist.profile }}"]
+      },
+      {
+        "heading": "Artist Statement",
+        "paragraphs": ["{{ artist.statement }}"]
+      },
+      {
+        "heading": "Quick Facts",
+        "type": "quick_facts"
+      },
+      {
+        "heading": "Selected Works",
+        "type": "artwork_list"
+      },
+      {
+        "heading": "Current Projects",
+        "paragraphs": [
+          "Developing new dark surreal ballpoint pen works for future exhibition opportunities, publications and independent presentations."
+        ]
+      },
+      {
+        "heading": "Downloads",
+        "type": "downloads"
+      },
+      {
+        "heading": "Contact",
+        "type": "contact"
+      }
+    ]
+  },
+  "press": {
+    "title": "Press",
+    "subtitle": "Media & Publications",
+    "sections": [
+      {
+        "heading": "Media Information",
+        "paragraphs": [
+          "This page serves as the official media and press resource for INKTENEBRIS. Future interviews, articles, reviews, publications and media appearances will be archived here."
+        ]
+      },
+      {
+        "heading": "Press Kit",
+        "paragraphs": [
+          "Journalists, editors, curators and writers may download the official press kit for artist information, artwork descriptions and media resources."
+        ],
+        "link": {
+          "label": "VIEW PRESS KIT →",
+          "url": "press-kit.html"
+        }
+      },
+      {
+        "heading": "Media Requests",
+        "paragraphs": [
+          "For interviews, publications, features, podcasts, exhibition coverage or editorial inquiries: {{ site.email }}"
+        ]
+      },
+      {
+        "heading": "Status",
+        "paragraphs": [
+          "Press coverage, interviews, reviews and publications will be archived here as they become available."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Last Updated: {{ site.policy_updated }}",
+    "sections": [
+      {
+        "heading": "Email Newsletter",
+        "paragraphs": [
+          "Email addresses submitted through the newsletter form are processed through Buttondown and are not sold or shared with third parties."
+        ]
+      },
+      {
+        "heading": "Artwork & Content",
+        "paragraphs": [
+          "All images, artwork and written content displayed on this website remain the intellectual property of {{ artist.name }} unless otherwise stated."
+        ]
+      },
+      {
+        "heading": "External Links",
+        "paragraphs": [
+          "This website may contain links to third-party platforms such as Instagram and Pinterest. INKTENEBRIS is not responsible for the privacy practices of those sites."
+        ]
+      },
+      {
+        "heading": "Changes",
+        "paragraphs": [
+          "This Privacy Policy may be updated periodically to reflect website changes and improvements."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "subtitle": "Last Updated: {{ site.policy_updated }}",
+    "sections": [
+      {
+        "heading": "Copyright",
+        "paragraphs": [
+          "All artwork, illustrations, drawings, logos, website designs, text content, graphics and visual materials displayed on INKTENEBRIS are the intellectual property of {{ artist.name }}. No content may be copied, reproduced, redistributed, modified, sold, published, uploaded or used for commercial purposes without prior written permission."
+        ]
+      },
+      {
+        "heading": "Fair Use",
+        "paragraphs": [
+          "Artwork images may be shared for non-commercial editorial, educational or review purposes when proper credit is provided."
+        ]
+      },
+      {
+        "heading": "Usage Restrictions",
+        "paragraphs": [
+          "No artwork may be copied, reproduced, redistributed, modified or used for commercial purposes without written permission."
+        ]
+      },
+      {
+        "heading": "Website Content",
+        "paragraphs": [
+          "Content is provided for informational and artistic purposes only and may be updated or removed without notice."
+        ]
+      },
+      {
+        "heading": "Acceptance",
+        "paragraphs": ["By using this website you agree to these Terms of Use."]
+      }
+    ]
+  }
+}
