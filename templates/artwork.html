@@ -1,41 +1,58 @@
 <main>
-    <section class="fullscreen-artwork"><img src="{{ base }}images/{{ work.image }}" width="{{ work.width }}"
-            height="{{ work.height }}" alt="{{ work.title }}" loading="eager" /></section>
-    <section class="artwork-details">
-        <div class="artwork-number">{{ '%02d'|format(index) }}</div>
-        <h1>{{ work.title }}</h1>
-        <div class="artwork-specs">
-            <div class="spec"><span>{{ site.ui.artwork_labels.medium }}</span>
-                <p>{{ work.medium|default(site.artwork_defaults.medium) }}</p>
-            </div>
-            <div class="spec"><span>{{ site.ui.artwork_labels.category }}</span>
-                <p>{{ work.category|default(site.artwork_defaults.category) }}</p>
-            </div>
-            <div class="spec"><span>{{ site.ui.artwork_labels.status }}</span>
-                <p>{{ work.status|default(site.artwork_defaults.status) }}</p>
-            </div>
-            <div class="spec"><span>{{ site.ui.artwork_labels.dimension }}</span>
-                <p>{{ work.dimensions }}</p>
-            </div>
-            <div class="spec"><span>{{ site.ui.artwork_labels.date }}</span>
-                <p>{{ work.date_display }}</p>
-            </div>
-        </div>
-        <p>{{ work.description }}</p>
-    </section>
-    <section class="artwork-quote">
-        <p>“{{ work.quote }}”</p>
-    </section>
-    <section class="artwork-navigation">{% if previous %}<a href="{{ previous.slug }}.html" class="nav-card"><span>{{
-                site.ui.previous_label }}</span>
-            <h3>{{ previous.title }}</h3>
-        </a>{% else %}<a href="{{ base }}index.html#art" class="nav-card"><span>{{ site.ui.back_label }}</span>
-            <h3>{{ site.ui.gallery_label }}</h3>
-        </a>{% endif %}{% if next_work %}<a href="{{ next_work.slug }}.html" class="nav-card"><span>{{
-                site.ui.next_label }}</span>
-            <h3>{{ next_work.title }}</h3>
-        </a>{% else %}<a href="{{ base }}index.html#art" class="nav-card"><span>{{ site.ui.back_to_gallery_label
-                }}</span>
-            <h3>{{ site.ui.gallery_label }}</h3>
-        </a>{% endif %}</section>
+  <section class="fullscreen-artwork">
+    <img
+      src="{{ base }}images/{{ work.image }}"
+      width="{{ work.width }}"
+      height="{{ work.height }}"
+      alt="{{ work.title }}"
+      loading="eager"
+    />
+  </section>
+  <section class="artwork-details">
+    <div class="artwork-number">{{ '%02d'|format(index) }}</div>
+    <h1>{{ work.title }}</h1>
+    <div class="artwork-specs">
+      <div class="spec">
+        <span>{{ site.ui.artwork_labels.medium }}</span>
+        <p>{{ work.medium|default(site.artwork_defaults.medium) }}</p>
+      </div>
+      <div class="spec">
+        <span>{{ site.ui.artwork_labels.category }}</span>
+        <p>{{ work.category|default(site.artwork_defaults.category) }}</p>
+      </div>
+      <div class="spec">
+        <span>{{ site.ui.artwork_labels.status }}</span>
+        <p>{{ work.status|default(site.artwork_defaults.status) }}</p>
+      </div>
+      <div class="spec">
+        <span>{{ site.ui.artwork_labels.dimension }}</span>
+        <p>{{ work.dimensions }}</p>
+      </div>
+      <div class="spec">
+        <span>{{ site.ui.artwork_labels.date }}</span>
+        <p>{{ work.date_display }}</p>
+      </div>
+    </div>
+    <p>{{ work.description }}</p>
+  </section>
+  <section class="artwork-quote">
+    <p>“{{ work.quote }}”</p>
+  </section>
+  <section class="artwork-navigation">
+    {% if previous %}<a href="{{ previous.slug }}.html" class="nav-card"
+      ><span>{{ site.ui.previous_label }}</span>
+      <h3>{{ previous.title }}</h3> </a
+    >{% else %}<a href="{{ base }}index.html#art" class="nav-card"
+      ><span>{{ site.ui.back_label }}</span>
+      <h3>{{ site.ui.gallery_label }}</h3> </a
+    >{% endif %}{% if next_work %}<a
+      href="{{ next_work.slug }}.html"
+      class="nav-card"
+      ><span>{{ site.ui.next_label }}</span>
+      <h3>{{ next_work.title }}</h3> </a
+    >{% else %}<a href="{{ base }}index.html#art" class="nav-card"
+      ><span>{{ site.ui.back_to_gallery_label }}</span>
+      <h3>{{ site.ui.gallery_label }}</h3> </a
+    >{% endif %}
+  </section>
 </main>

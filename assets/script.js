@@ -85,8 +85,13 @@ if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 
 function updateScrollProgress() {
   if (!progress) return;
-  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-  const percentage = maxScroll ? (Math.min(Math.max(window.scrollY, 0), maxScroll) / maxScroll) * 100 : 0;
+  const maxScroll = Math.max(
+    0,
+    document.documentElement.scrollHeight - window.innerHeight,
+  );
+  const percentage = maxScroll
+    ? (Math.min(Math.max(window.scrollY, 0), maxScroll) / maxScroll) * 100
+    : 0;
   progress.style.width = `${percentage}%`;
 }
 
@@ -144,14 +149,34 @@ if (document.querySelector(".hero-title") && typeof gsap !== "undefined") {
 }
 
 if (transition) {
-  document.querySelectorAll('a[href]').forEach((link) => {
+  document.querySelectorAll("a[href]").forEach((link) => {
     link.addEventListener("click", (event) => {
-      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.target || link.hasAttribute("download")) return;
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        link.target ||
+        link.hasAttribute("download")
+      )
+        return;
       const destination = new URL(link.href, window.location.href);
-      if (destination.origin !== window.location.origin || !destination.pathname.endsWith(".html") || destination.pathname === window.location.pathname) return;
+      if (
+        destination.origin !== window.location.origin ||
+        !destination.pathname.endsWith(".html") ||
+        destination.pathname === window.location.pathname
+      )
+        return;
       event.preventDefault();
       const navigate = () => window.location.assign(destination.href);
-      if (typeof gsap !== "undefined") gsap.to(transition, { opacity: 1, duration: 0.5, onComplete: navigate });
+      if (typeof gsap !== "undefined")
+        gsap.to(transition, {
+          opacity: 1,
+          duration: 0.5,
+          onComplete: navigate,
+        });
       else navigate();
     });
   });
@@ -242,7 +267,6 @@ if (document.querySelector("#about") && typeof gsap !== "undefined") {
     );
   });
 }
-
 
 if (
   document.querySelector(".artwork-details h1") &&

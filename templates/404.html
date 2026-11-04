@@ -1,25 +1,38 @@
 <!doctype html>
 <html lang="{{ site.language }}">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="robots" content="noindex">
-    <meta name="theme-color" content="{{ site.theme_color }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="{{ site.theme_color }}" />
     <title>{{ error.title }} | {{ site.site_name }}</title>
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="icon" href="/images/favicon.ico">
-</head>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <section
-            style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px">
-            <h1 style="font-size:15vw;line-height:1;margin:0">{{ error.code }}</h1>
-            <p style="margin-top:20px;opacity:.6">{{ error_message }}</p><a href="/index.html"
-                style="margin-top:40px;border:1px solid white;padding:15px 30px">{{ error.button }}</a>
-        </section>
+      <section
+        style="
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 24px;
+        "
+      >
+        <h1 style="font-size: 15vw; line-height: 1; margin: 0">
+          {{ error.code }}
+        </h1>
+        <p style="margin-top: 20px; opacity: 0.6">{{ error_message }}</p>
+        <a
+          href="/index.html"
+          style="margin-top: 40px; border: 1px solid white; padding: 15px 30px"
+          >{{ error.button }}</a
+        >
+      </section>
     </main>
-</body>
-
+  </body>
 </html>

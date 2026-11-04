@@ -1,34 +1,74 @@
 <main>
-    <section class="legal-page">
-        <div class="legal-header">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.subtitle }}</p>
-        </div>{% if page.download %}<a href="{{ base }}{{ page.download.file }}" download class="contact-btn">{{
-            page.download.label }}</a>{% endif %}<div class="legal-content">
-            {% for section in page.sections %}{% if section.heading %}<h2>{{ section.heading }}</h2>{% endif %}
-            {% if section.type == 'artwork_list' %}<p>{% for work in selected_works %}{{ work.title|upper }}{% if not
-                loop.last %}<br />{% endif %}{% endfor %}</p>
-            {% elif section.type == 'artist_list' %}<p>{% for value in artist[section.field] %}{{ value }}{% if not
-                loop.last %}<br />{% endif %}{% endfor %}</p>
-            {% elif section.type == 'quick_facts' %}<p><strong>{{ documents.press_kit.facts_labels.artist }}:</strong>
-                {{ artist.name }}<br /><br /><strong>{{ documents.press_kit.facts_labels.artist_name }}:</strong> {{
-                artist.professional_name }}<br /><br /><strong>{{ documents.press_kit.facts_labels.location }}:</strong>
-                {{ artist.location }}<br /><br /><strong>{{ documents.press_kit.facts_labels.medium }}:</strong> {{
-                artist.medium }}<br /><br /><strong>{{ documents.press_kit.facts_labels.style }}:</strong> {{
-                artist.style }}<br /><br /><strong>{{ documents.press_kit.facts_labels.practice }}:</strong> {{
-                artist.professional_practice }}</p>
-            {% elif section.type == 'downloads' %}<p><a href="{{ base }}files/cv.pdf">{{ documents.downloads.cv
-                    }}</a><br /><br /><a href="{{ base }}files/statement.pdf">{{ documents.downloads.statement
-                    }}</a><br /><br /><a href="{{ base }}files/press-kit.pdf">{{ documents.downloads.press_kit }}</a>
-            </p>
-            {% elif section.type == 'contact' %}<p>For media requests, interviews, publications, collaborations or
-                exhibition opportunities:<br /><br /><a href="mailto:{{ site.email }}">{{ site.email
-                    }}</a><br /><br />{% for social in site.socials %}<a href="{{ social.url }}" target="_blank"
-                    rel="noopener noreferrer">{{ social.handle }}</a>{% if not loop.last %}<br /><br />{% endif %}{%
-                endfor %}</p>
-            {% else %}{% for paragraph in section.paragraphs|default([]) %}<p>{{ render_text(paragraph) }}</p>{% endfor
-            %}{% if section.link %}<p><a href="{{ section.link.url }}">{{ section.link.label }}</a></p>{% endif %}{%
-            endif %}{% endfor %}
-        </div>
-    </section>
+  <section class="legal-page">
+    <div class="legal-header">
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.subtitle }}</p>
+    </div>
+    {% if page.download %}<a
+      href="{{ base }}{{ page.download.file }}"
+      download
+      class="contact-btn"
+      >{{ page.download.label }}</a
+    >{% endif %}
+    <div class="legal-content">
+      {% for section in page.sections %}{% if section.heading %}
+      <h2>{{ section.heading }}</h2>
+      {% endif %} {% if section.type == 'artwork_list' %}
+      <p>
+        {% for work in selected_works %}{{ work.title|upper }}{% if not
+        loop.last %}<br />{% endif %}{% endfor %}
+      </p>
+      {% elif section.type == 'artist_list' %}
+      <p>
+        {% for value in artist[section.field] %}{{ value }}{% if not loop.last
+        %}<br />{% endif %}{% endfor %}
+      </p>
+      {% elif section.type == 'quick_facts' %}
+      <p>
+        <strong>{{ documents.press_kit.facts_labels.artist }}:</strong> {{
+        artist.name }}<br /><br /><strong
+          >{{ documents.press_kit.facts_labels.artist_name }}:</strong
+        >
+        {{ artist.professional_name }}<br /><br /><strong
+          >{{ documents.press_kit.facts_labels.location }}:</strong
+        >
+        {{ artist.location }}<br /><br /><strong
+          >{{ documents.press_kit.facts_labels.medium }}:</strong
+        >
+        {{ artist.medium }}<br /><br /><strong
+          >{{ documents.press_kit.facts_labels.style }}:</strong
+        >
+        {{ artist.style }}<br /><br /><strong
+          >{{ documents.press_kit.facts_labels.practice }}:</strong
+        >
+        {{ artist.professional_practice }}
+      </p>
+      {% elif section.type == 'downloads' %}
+      <p>
+        <a href="{{ base }}files/cv.pdf">{{ documents.downloads.cv }}</a
+        ><br /><br /><a href="{{ base }}files/statement.pdf"
+          >{{ documents.downloads.statement }}</a
+        ><br /><br /><a href="{{ base }}files/press-kit.pdf"
+          >{{ documents.downloads.press_kit }}</a
+        >
+      </p>
+      {% elif section.type == 'contact' %}
+      <p>
+        For media requests, interviews, publications, collaborations or
+        exhibition opportunities:<br /><br /><a href="mailto:{{ site.email }}"
+          >{{ site.email }}</a
+        ><br /><br />{% for social in site.socials %}<a
+          href="{{ social.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ social.handle }}</a
+        >{% if not loop.last %}<br /><br />{% endif %}{% endfor %}
+      </p>
+      {% else %}{% for paragraph in section.paragraphs|default([]) %}
+      <p>{{ render_text(paragraph) }}</p>
+      {% endfor %}{% if section.link %}
+      <p><a href="{{ section.link.url }}">{{ section.link.label }}</a></p>
+      {% endif %}{% endif %}{% endfor %}
+    </div>
+  </section>
 </main>
