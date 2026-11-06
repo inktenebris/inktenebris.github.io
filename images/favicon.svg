@@ -10,20 +10,20 @@
   </metadata>
   <style>
     #light-icon {
-      display: inline;
+      display: none;
     }
 
     #dark-icon {
-      display: none;
+      display: inline;
     }
 
     @media (prefers-color-scheme: dark) {
       #light-icon {
-        display: none;
+        display: inline;
       }
 
       #dark-icon {
-        display: inline;
+        display: none;
       }
     }
   </style>
