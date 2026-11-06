@@ -8,3 +8,10 @@ venv/
 dist/
 qr_code/
 .vscode/
+admin/
+tools/
+start-cms.sh
+build-site.sh
+.github/
+requirements.txt
+requirements-dev.txt
