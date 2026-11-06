@@ -89,5 +89,5 @@ In GitHub, open **Settings → Pages → Build and deployment → Source** and s
 - The existing visual stylesheet, artwork assets, animations and page URLs are retained.
 - GSAP 3.12.5 is self-hosted in `assets/vendor/` (no CDN). Google Fonts remain an optional external resource; the site falls back to system fonts without it.
 - PDFs use Helvetica. If you add characters it cannot draw (e.g. Bengali), the build prints a warning.
-- `qr code/qr.py` is a local-only helper (not published). Install its dependency with `python -m pip install -r requirements-dev.txt`.
+- `qr_code/qr.py` is a local-only helper (not published). Install its dependency with `python -m pip install -r requirements-dev.txt`.
 - The sitemap only lists `lastmod` for artworks (their own date).

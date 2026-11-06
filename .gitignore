@@ -6,3 +6,5 @@ venv/
 .DS_Store
 *.bak
 dist/
+qr_code/
+.vscode/

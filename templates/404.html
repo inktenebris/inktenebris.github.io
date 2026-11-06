@@ -6,8 +6,8 @@
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="{{ site.theme_color }}" />
     <title>{{ error.title }} | {{ site.site_name }}</title>
-    <link rel="stylesheet" href="/assets/style.css" />
-    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="{{ base }}assets/style.css" />
+    <link rel="icon" href="{{ base }}images/favicon.ico" />
   </head>
 
   <body>
@@ -28,7 +28,7 @@
         </h1>
         <p style="margin-top: 20px; opacity: 0.6">{{ error_message }}</p>
         <a
-          href="/index.html"
+          href="{{ base }}index.html"
           style="margin-top: 40px; border: 1px solid white; padding: 15px 30px"
           >{{ error.button }}</a
         >
