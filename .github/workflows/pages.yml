@@ -56,3 +56,159 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  notify:
+    name: Notify subscribers of new artwork
+    runs-on: ubuntu-latest
+    needs: deploy
+
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect newly added artworks
+        id: artworks
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          python3 - <<'PY'
+          import base64
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          before = os.environ.get("BEFORE_SHA", "")
+          zero_sha = "0" * 40
+
+          old_artworks = []
+
+          if before and before != zero_sha:
+              result = subprocess.run(
+                  ["git", "show", f"{before}:content/artworks.json"],
+                  capture_output=True,
+                  text=True
+              )
+
+              if result.returncode == 0:
+                  old_artworks = json.loads(result.stdout)
+
+          current_artworks = json.loads(
+              Path("content/artworks.json").read_text(encoding="utf-8")
+          )
+
+          old_slugs = {
+              item.get("slug")
+              for item in old_artworks
+              if isinstance(item, dict)
+          }
+
+          new_artworks = [
+              item for item in current_artworks
+              if isinstance(item, dict)
+              and item.get("slug")
+              and item.get("slug") not in old_slugs
+          ]
+
+          encoded = base64.b64encode(
+              json.dumps(
+                  new_artworks,
+                  ensure_ascii=False
+              ).encode("utf-8")
+          ).decode("ascii")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write(f"artworks_b64={encoded}\n")
+
+          print(f"New artworks detected: {len(new_artworks)}")
+
+          for artwork in new_artworks:
+              print(f"- {artwork['title']} ({artwork['slug']})")
+          PY
+
+      - name: Send artwork announcements
+        if: steps.artworks.outputs.artworks_b64 != ''
+        env:
+          MAILER_WEBHOOK_SECRET: ${{ secrets.MAILER_WEBHOOK_SECRET }}
+          MAILER_WEBHOOK_URL: https://script.google.com/macros/s/AKfycbwC1UYAcgtAFh__3ztAZvaTqZ4fRBp5azTDVmXa8Geabx12iNed0N4dZ3dQgow_doJn/exec
+          ARTWORKS_B64: ${{ steps.artworks.outputs.artworks_b64 }}
+
+        run: |
+          python3 - <<'PY'
+          import base64
+          import json
+          import os
+          import subprocess
+
+          secret = os.environ["MAILER_WEBHOOK_SECRET"]
+          endpoint = os.environ["MAILER_WEBHOOK_URL"]
+
+          artworks = json.loads(
+              base64.b64decode(
+                  os.environ["ARTWORKS_B64"]
+              ).decode("utf-8")
+          )
+
+          if not secret:
+              raise RuntimeError("Missing MAILER_WEBHOOK_SECRET.")
+
+          for artwork in artworks:
+              payload = {
+                  "action": "publishArtwork",
+                  "secret": secret,
+                  "slug": artwork["slug"],
+                  "title": artwork["title"],
+                  "image": artwork["image"],
+                  "description": artwork["description"],
+                  "date": artwork["date"]
+              }
+
+              command = [
+                  "curl",
+                  "--silent",
+                  "--show-error",
+                  "--location",
+                  "--fail-with-body"
+              ]
+
+              for key, value in payload.items():
+                  command.extend([
+                      "--data-urlencode",
+                      f"{key}={value}"
+                  ])
+
+              command.append(endpoint)
+
+              response = subprocess.run(
+                  command,
+                  capture_output=True,
+                  text=True
+              )
+
+              if response.returncode != 0:
+                  raise RuntimeError(
+                      f"Webhook request failed for {artwork['slug']}: "
+                      f"{response.stderr}"
+                  )
+
+              try:
+                  result = json.loads(response.stdout)
+              except json.JSONDecodeError:
+                  raise RuntimeError(
+                      f"Invalid webhook response for {artwork['slug']}: "
+                      f"{response.stdout[:500]}"
+                  )
+
+              if not result.get("ok"):
+                  raise RuntimeError(
+                      f"Mailer rejected {artwork['slug']}: "
+                      f"{result.get('error', 'Unknown error')}"
+                  )
+
+              print(json.dumps(result, ensure_ascii=False))
+
+          print("All new artwork announcements processed.")
+          PY
