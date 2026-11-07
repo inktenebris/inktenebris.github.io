@@ -53,7 +53,11 @@ def atomic_write(path: Path, value: str):
 
 
 def save_text(path: Path, value: str):
-    atomic_write(path, value.rstrip() + "\n")
+    cleaned = "\n".join(
+        line.rstrip() for line in value.splitlines()
+    ).rstrip("\n")
+
+    atomic_write(path, cleaned + "\n")
 
 
 def safe_file(base: Path, relative: str):

@@ -526,7 +526,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.updates-form input {
+.updates-form input[type="email"] {
   width: 420px;
   max-width: 100%;
   background: transparent;
@@ -539,7 +539,7 @@ a:hover {
   transition: 0.4s;
 }
 
-.updates-form input:focus {
+.updates-form input[type="email"]:focus {
   border-color: white;
 }
 
@@ -561,9 +561,43 @@ a:hover {
   color: black;
 }
 
-.updates-form input::placeholder {
+.updates-form input[type="email"]::placeholder {
   color: rgba(255, 255, 255, 0.4);
   letter-spacing: 0.08em;
+}
+
+.updates-consent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  flex-basis: 100%;
+  color: #999;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.updates-consent input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 2px 0 0;
+  accent-color: white;
+}
+
+.updates-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.updates-note {
+  font-size: 12px !important;
+  color: #777;
+  margin-top: 18px !important;
 }
 
 footer {
@@ -1198,7 +1232,7 @@ footer {
     flex-direction: column;
   }
 
-  .updates-form input {
+  .updates-form input[type="email"] {
     width: 100%;
   }
 

@@ -142,16 +142,45 @@
         target="_blank"
         class="updates-form"
       >
-        <label class="sr-only" for="newsletter-email">Email address</label
-        ><input
+        <input type="hidden" name="action" value="subscribe" />
+
+        <label class="sr-only" for="newsletter-email"> Email address </label>
+
+        <input
           id="newsletter-email"
           type="email"
           name="email"
           placeholder="Your Email Address"
           autocomplete="email"
+          maxlength="254"
           required
-        /><button type="submit">{{ home.newsletter.button }}</button>
+        />
+
+        <div class="updates-consent">
+          <input
+            id="newsletter-consent"
+            type="checkbox"
+            name="consent"
+            value="yes"
+            required
+          />
+          <label for="newsletter-consent">
+            I agree to receive new artwork announcements from INKTENEBRIS. I can
+            unsubscribe anytime.
+          </label>
+        </div>
+
+        <!-- Honeypot field for basic bot filtering -->
+        <div class="updates-honeypot" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <button type="submit">{{ home.newsletter.button }}</button>
       </form>
+
+      <p class="updates-note">
+        You'll receive a confirmation email before being subscribed.
+      </p>
     </div>
   </section>
   {% endif %}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; object-src 'none'; base-uri 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; form-action 'self' https://buttondown.com;"
+      content="default-src 'self'; object-src 'none'; base-uri 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; form-action 'self' https://script.google.com https://*.googleusercontent.com;"
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="robots" content="index, follow" />
@@ -24,9 +24,9 @@
     <meta name="twitter:title" content="INKTENEBRIS | INKTENEBRIS" />
     <meta name="twitter:description" content="Dark surreal ballpoint pen artwork by Soumalya Sarkar. Intricate monochromatic drawings exploring psychological horror, identity, transformation and the subconscious." />
     <meta name="twitter:image" content="https://inktenebris.github.io/images/artworks/art1.jpg" />
-    
+
     <link rel="preload" as="image" href="images/artworks/art3.jpg" />
-    
+
     <link rel="icon" href="images/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <link
@@ -57,14 +57,14 @@
     <div class="scroll-progress"></div>
     <div id="page-transition"></div>
     <div class="noise"></div>
-    
+
     <div id="loader">
       <div class="loader-text">
         <span>INKTENEBRIS</span>
         <div class="loader-line"></div>
       </div>
     </div>
-    
+
     <nav class="side-nav">
       <a href="index.html" class="side-logo"
         ><img
@@ -138,14 +138,14 @@
   <section class="intro">
     <div class="intro-content">
       <h2>DRAWN FROM THE DARK</h2>
-      
+
       <p>INKTENEBRIS is a collection of surreal ballpoint pen illustrations exploring psychological horror, distorted identity, dream imagery and isolation.</p>
-      
+
       <p>Every artwork is created entirely by hand through dense layers of ink and obsessive mark-making.</p>
-      
+
     </div>
   </section>
-  
+
   <section class="split-showcase">
     <div class="split-image">
       <img
@@ -161,7 +161,7 @@
       <p>Psychological ballpoint illustration exploring observation, isolation and distorted identity.</p>
     </div>
   </section>
-  
+
   <section class="split-showcase reverse">
     <div class="split-image">
       <img
@@ -177,7 +177,7 @@
       <p>A study of emptiness and perception rendered entirely with ballpoint pen.</p>
     </div>
   </section>
-  
+
   <section class="exhibition-intro">
     <div class="exhibition-number">
       10
@@ -356,15 +356,15 @@
       </div>
     </div>
     <div class="about-right">
-      
+
       <p>INKTENEBRIS is the artistic practice of Soumalya Sarkar, a dark surreal artist dedicated to exploring the emotional and psychological landscapes hidden beneath everyday perception. Working exclusively with ballpoint pen, he creates intricate monochromatic drawings where beauty and discomfort coexist.</p>
-      
+
       <p>The work is driven by fascination with transformation, memory, identity, fear and the subconscious. Human figures dissolve into symbols, familiar forms become unsettling, and ordinary objects take on new meaning. Each artwork is approached as an open-ended narrative, allowing viewers to discover their own interpretations within the imagery.</p>
-      
+
       <p>Every drawing is built through countless layers of ink, requiring hours of precision, patience and concentration. The slow process becomes part of the art itself, mirroring the gradual emergence of ideas, emotions and hidden thoughts from darkness into light.</p>
-      
+
       <p>Through INKTENEBRIS, Soumalya seeks to create artwork that lingers in the mind long after it has been seen—images that disturb, question and resonate rather than simply decorate. The goal is not comfort, but connection through curiosity, mystery and imagination.</p>
-      
+
     </div>
     <div class="artist-meta">
       <p>Location: India, West Bengal</p>
@@ -421,30 +421,59 @@
       >EMAIL</a
     >
   </section>
-  
+
   <section id="updates">
     <div class="updates-container">
       <h2>JOIN THE DARKNESS</h2>
       <p>Receive new artworks, behind-the-scenes sketches, and exclusive updates from INKTENEBRIS.</p>
       <form
-        action="https://buttondown.com/api/emails/embed-subscribe/soumalya"
+        action="https://script.google.com/macros/s/AKfycbwC1UYAcgtAFh__3ztAZvaTqZ4fRBp5azTDVmXa8Geabx12iNed0N4dZ3dQgow_doJn/exec"
         method="post"
         target="_blank"
         class="updates-form"
       >
-        <label class="sr-only" for="newsletter-email">Email address</label
-        ><input
+        <input type="hidden" name="action" value="subscribe" />
+
+        <label class="sr-only" for="newsletter-email"> Email address </label>
+
+        <input
           id="newsletter-email"
           type="email"
           name="email"
           placeholder="Your Email Address"
           autocomplete="email"
+          maxlength="254"
           required
-        /><button type="submit">SUBSCRIBE</button>
+        />
+
+        <div class="updates-consent">
+          <input
+            id="newsletter-consent"
+            type="checkbox"
+            name="consent"
+            value="yes"
+            required
+          />
+          <label for="newsletter-consent">
+            I agree to receive new artwork announcements from INKTENEBRIS. I can
+            unsubscribe anytime.
+          </label>
+        </div>
+
+        <!-- Honeypot field for basic bot filtering -->
+        <div class="updates-honeypot" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <button type="submit">SUBSCRIBE</button>
       </form>
+
+      <p class="updates-note">
+        You'll receive a confirmation email before being subscribed.
+      </p>
     </div>
   </section>
-  
+
 </main>
     <footer>
       <div class="footer-links">
