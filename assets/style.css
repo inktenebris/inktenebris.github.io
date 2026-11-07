@@ -1360,6 +1360,7 @@ footer {
   }
 
   .gallery {
+    grid-template-columns: repeat(2, 1fr);
     padding: 80px 30px;
   }
 }
